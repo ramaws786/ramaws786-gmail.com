@@ -28,9 +28,9 @@ public class ProductController {
 	@GetMapping(produces= {"application/json","application/xml"})
 	public ResponseEntity<ProductList> getAll(){
 		List<Product> products = service.getAll();
-		ProductList plist = new ProductList();
-		plist.setProducts(products);
-		return  new ResponseEntity<>(plist,HttpStatus.OK);
+		ProductList plist1 = new ProductList();
+		plist1.setProducts(products);
+		return  new ResponseEntity<>(plist1,HttpStatus.OK);
 	}
 	
 	@GetMapping(value="/find",produces="application/json")
